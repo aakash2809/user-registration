@@ -1,0 +1,1 @@
+console.log(`\nWelcome to User Registration Program`);
