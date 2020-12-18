@@ -30,13 +30,25 @@ isValidEmail = (email) => {
     }
 }
 
+//Mobile Number validator function
 isValidMobileNumber = (mobileNumber) => {
-    let emailPattern = new RegExp(`^(\\+?\\d{1,3})[ ]([0-9]{10})$`);
-    if (emailPattern.test(mobileNumber)) {
+    let mobileNumberPattern = new RegExp(`^(\\+?\\d{1,3})[ ]([0-9]{10})$`);
+    if (mobileNumberPattern.test(mobileNumber)) {
         console.log(`${mobileNumber} is a Valid mobile number!`);
     }
     else {
         console.log(`${mobileNumber} is an InValid mobile number!`);
+    }
+}
+
+//Password validator function
+isValidPassword = (password) => {
+    let passwordPattern = new RegExp(`^[a-zA-Z0-9!?.+-~!@#$%^&*_]{8,}$`);
+    if (passwordPattern.test(password)) {
+        console.log(`${password} is a Valid password!`);
+    }
+    else {
+        console.log(`${password} is an InValid password!`);
     }
 }
 
@@ -56,3 +68,6 @@ isValidMobileNumber(`91 8819992553`);
 isValidMobileNumber(`91 88199925`);
 isValidMobileNumber(`918819992553`);
 isValidMobileNumber(`8819992553`);
+
+isValidPassword(`dfjjk67A`);
+isValidPassword(`dfjjk67`);
