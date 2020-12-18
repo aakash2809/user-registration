@@ -18,7 +18,7 @@ var invalidEmailSample = ["abc", "abc@.com.my", "abc123@gmail.a", "abc123@.com",
  */
 isValidName = (Name) => {
     (namePattern.test(Name)) ? console.log(`${Name} is a valid name!\n`) :
-        console.log(`${Name} is an Invalid  name!\n`);
+        console.log(`${Name} is an Invalid name!\n`);
 }
 
 /**
@@ -26,8 +26,8 @@ isValidName = (Name) => {
  * @param {email}  holds email id provided by caller method
  */
 isValidEmail = (email) => {
-    (emailPattern.test(email)) ? console.log(`${email} is a valid first name!\n`) :
-        console.log(`${email} is an Invalid first name!\n`);
+    (emailPattern.test(email)) ? console.log(`${email} is a valid Email Id!\n`) :
+        console.log(`${email} is an Invalid Email Id!\n`);
 }
 
 /**
@@ -50,7 +50,7 @@ isValidPassword = (password) => {
 
 /**
  * @description All sample email id validator funtion
- * @param {EmailSample} can hold  Sample Email Id all provided by user
+ * @param {EmailSample} can hold All Sample Email Id provided by user
  */
 validateSampleEmailIds = (EmailSample) => {
     let index = 0;
@@ -62,19 +62,19 @@ validateSampleEmailIds = (EmailSample) => {
 }
 
 console.log(`\nWelcome to User Registration Program`);
-var fName = prompt(`Enter First Name`);
+var fName = prompt(`Enter First Name: `);
 isValidName(fName);
 
-var lName = prompt(`Enter Last Name`);
+var lName = prompt(`Enter Last Name: `);
 isValidName(lName);
 
-var email = prompt(`Enter Email Id`);
+var email = prompt(`Enter Email Id: `);
 isValidEmail(email);
 
-var mobileNumber = prompt(`Enter Mobile Number`);
+var mobileNumber = prompt(`Enter Mobile Number: `);
 isValidMobileNumber(mobileNumber);
 
-var password = prompt(`Enter Password`);
+var password = prompt(`Enter Password: `);
 isValidMobileNumber(password);
 
 validateSampleEmailIds(validEmailSample);
