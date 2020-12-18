@@ -43,7 +43,7 @@ isValidMobileNumber = (mobileNumber) => {
 
 //Password validator function
 isValidPassword = (password) => {
-    let passwordPattern = new RegExp(`^(?=.*[A-Z])[a-zA-Z0-9!?.+-~!@#$%^&*_]{8,}$`);
+    let passwordPattern = new RegExp(`^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9!?.+-~!@#$%^&*_]{8,}$`);
     if (passwordPattern.test(password)) {
         console.log(`${password} is a Valid password!`);
     }
@@ -70,5 +70,6 @@ isValidMobileNumber(`918819992553`);
 isValidMobileNumber(`8819992553`);
 
 isValidPassword(`dfjjk67`);
-isValidPassword(`dfjjk67a`);
-isValidPassword(`dfjjk67A`);
+isValidPassword(`dfjjkfga`);
+isValidPassword(`dfjjkatA`);
+isValidPassword(`dfjjka5A`);
