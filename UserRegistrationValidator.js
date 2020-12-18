@@ -12,10 +12,10 @@ isValidFirstName = (fName) => {
 isValidLastName = (lName) => {
     let pattern = new RegExp(`^[A-Z]{1}[a-zA-Z]{2,}$`);
     if (pattern.test(lName)) {
-        console.log(`${lName} is Valid last name!`);
+        console.log(`${lName} is a Valid last name!`);
     }
     else {
-        console.log(`${lName} is InValid last name!`);
+        console.log(`${lName} is an InValid last name!`);
     }
 }
 
