@@ -30,6 +30,16 @@ isValidEmail = (email) => {
     }
 }
 
+isValidMobileNumber = (mobileNumber) => {
+    let emailPattern = new RegExp(`^(\\+?\\d{1,3})[ ]([0-9]{10})$`);
+    if (emailPattern.test(mobileNumber)) {
+        console.log(`${mobileNumber} is a Valid mobile number!`);
+    }
+    else {
+        console.log(`${mobileNumber} is an InValid mobile number!`);
+    }
+}
+
 console.log(`\nWelcome to User Registration Program`);
 isValidFirstName(`Raj`);
 isValidFirstName(`Ra`);
@@ -41,3 +51,8 @@ isValidLastName(`pat`);
 
 isValidEmail('abc@yahoo.com');
 isValidEmail('abc');
+
+isValidMobileNumber(`91 8819992553`);
+isValidMobileNumber(`91 88199925`);
+isValidMobileNumber(`918819992553`);
+isValidMobileNumber(`8819992553`);
