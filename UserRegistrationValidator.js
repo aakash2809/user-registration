@@ -10,8 +10,8 @@ isValidFirstName = (fName) => {
 
 // Last name validator fucntion
 isValidLastName = (lName) => {
-    let pattern = new RegExp(`^[A-Z]{1}[a-zA-Z]{2,}$`);
-    if (pattern.test(lName)) {
+    let lastNamePattern = new RegExp(`^[A-Z]{1}[a-zA-Z]{2,}$`);
+    if (lastNamePattern.test(lName)) {
         console.log(`${lName} is a Valid last name!`);
     }
     else {
@@ -41,9 +41,9 @@ isValidMobileNumber = (mobileNumber) => {
     }
 }
 
-//Password validator function
+//Password validator function   
 isValidPassword = (password) => {
-    let passwordPattern = new RegExp(`^(?=.*[0-9])(?=.*[A-Z])[a-zA-Z0-9!?.+-~!@#$%^&*_]{8,}$`);
+    let passwordPattern = new RegExp(`^(?=.*[0-9])(?=.*[A-Z])(?=.*[\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_])[a-zA-Z0-9\\~\\?\\.\\+\\-\\~\\!\\@\\#\\$\\%\\^\\&\\*\\_]{8,}$`);
     if (passwordPattern.test(password)) {
         console.log(`${password} is a Valid password!`);
     }
@@ -73,3 +73,4 @@ isValidPassword(`dfjjk67`);
 isValidPassword(`dfjjkfga`);
 isValidPassword(`dfjjkatA`);
 isValidPassword(`dfjjka5A`);
+isValidPassword(`dfjjk@5A`);
